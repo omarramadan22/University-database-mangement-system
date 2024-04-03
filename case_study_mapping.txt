@@ -1,0 +1,32 @@
+Student Table:
+
+student_id (Primary Key)
+student_name
+email
+address
+phone_mobile
+date_of_birth
+gpa
+
+Department Table:
+
+department_id (Primary Key)
+department_name
+
+Course Table:
+
+course_id (Primary Key)
+course_name
+department_id (Foreign Key referencing department_id in the department table)
+credit_hours
+
+Grade Table:
+
+grade (Primary Key)
+
+Enrollment Table:
+
+student_id (Foreign Key referencing student_id in the student table)
+course_id (Foreign Key referencing course_id in the course table)
+grade (Foreign Key referencing grade in the grade table)
+Composite Primary Key: (student_id, course_id)
